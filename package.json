@@ -1,0 +1,26 @@
+{
+    "name": "objj",
+    "displayName": "Objective-J",
+    "description": "Language support for Objective-J",
+    "version": "0.0.1",
+    "publisher": "rramsden",
+    "engines": {
+        "vscode": "^1.18.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "objj",
+            "aliases": ["Objective-J", "objj"],
+            "extensions": [".j",".J"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "objj",
+            "scopeName": "source.js.objj",
+            "path": "./syntaxes/Objective-J.tmLanguage"
+        }]
+    }
+}
