@@ -2,6 +2,7 @@
     "name": "objj",
     "displayName": "Objective-J",
     "description": "Language support for Objective-J",
+    "icon": "icon.png",
     "version": "0.0.1",
     "publisher": "rramsden",
     "engines": {
