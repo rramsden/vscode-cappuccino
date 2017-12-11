@@ -3,25 +3,47 @@
     "displayName": "Objective-J",
     "description": "Language support for Objective-J",
     "icon": "icon.png",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "rramsden",
     "engines": {
         "vscode": "^1.18.0"
     },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install"
+    },
     "categories": [
         "Languages"
     ],
+    "activationEvents": [
+        "onLanguage:objj"
+    ],
+    "main": "./out/extension",
     "contributes": {
-        "languages": [{
-            "id": "objj",
-            "aliases": ["Objective-J", "objj"],
-            "extensions": [".j",".J"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "objj",
-            "scopeName": "source.js.objj",
-            "path": "./syntaxes/Objective-J.tmLanguage"
-        }]
+        "languages": [
+            {
+                "id": "objj",
+                "aliases": [
+                    "Objective-J",
+                    "objj"
+                ],
+                "extensions": [
+                    ".j",
+                    ".J"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "objj",
+                "scopeName": "source.js.objj",
+                "path": "./syntaxes/Objective-J.tmLanguage"
+            }
+        ]
+    },
+    "devDependencies": {
+        "@types/node": "^8.0.57",
+        "typescript": "^2.6.2",
+        "vscode": "^1.1.10"
     }
 }
