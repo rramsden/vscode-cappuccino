@@ -1,13 +1,18 @@
 {
-    "name": "objj",
-    "displayName": "Objective-J",
-    "description": "Language support for Objective-J",
+    "name": "cappuccino",
+    "displayName": "Cappuccino",
+    "description": "VS Code extension for Cappuccino, includes Objective-J language support",
     "icon": "icon.png",
     "version": "0.0.3",
     "publisher": "rramsden",
     "engines": {
         "vscode": "^1.18.0"
     },
+    "keywords": [
+      "Objective-J",
+      "objj",
+      "Cappuccino"
+    ],
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install"
     },
