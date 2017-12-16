@@ -15,7 +15,7 @@ export function activate(context: vscode.ExtensionContext) {
     linter.lintOpenFiles();
     context.subscriptions.push(linter.diagnosticCollection);
 	context.subscriptions.push(
-		vscode.workspace.onDidOpenTextDocument(linter.lint, linter),
-		vscode.workspace.onDidSaveTextDocument(linter.lint, linter)
+        vscode.workspace.onDidOpenTextDocument(linter.lint, linter),
+        vscode.workspace.onDidChangeTextDocument((change) => linter.lint(change.document))
     );
 }
