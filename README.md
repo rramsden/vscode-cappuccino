@@ -2,9 +2,9 @@
  
 This extension provides support for [Cappuccino](http://www.cappuccino-project.org/), including:
 
-* Full syntax support for Objective-J (.j, .J) files
-* Symbol lookup in files (Cmd+Shift+o)
+* Syntax highlighting & checking for Objective-J
+* Quick symbol lookup (cmd+shift+o)
 
 ## Installation
 
-This extension is available in [VS Code Marketplace](#)
+This extension is available in [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=rramsden.cappuccino)
