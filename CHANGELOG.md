@@ -3,6 +3,10 @@ All notable changes this project will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.6] - 2017-12-16
+### Fixed
+- acorn-objj package was not added as a dependency
+
 ## [0.0.5] - 2017-12-16
 ### Fixed
 - Compile typescript modules before publishing to marketplace
