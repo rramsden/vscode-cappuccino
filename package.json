@@ -49,8 +49,10 @@
     },
     "devDependencies": {
         "@types/node": "^8.0.57",
-        "acorn-objj": "^1.1.3",
         "typescript": "^2.6.2",
         "vscode": "^1.1.10"
+    },
+    "dependencies": {
+        "acorn-objj": "^1.1.3"
     }
 }
