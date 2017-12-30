@@ -7,8 +7,9 @@ export class ObjjDocumentSymbolProvider implements vscode.DocumentSymbolProvider
 
         for (let i = 0; i < lineCount; ++i) {
             let line = document.lineAt(i);
-            let rawText = line.text
-            let word = rawText.substr(0, rawText.indexOf(' '));
+            let rawText = line.text;
+            let word = rawText.trimLeft();
+            word = word.substr(0, word.indexOf(' '));
 
             if (word.startsWith('@')) {
                 let name = rawText.split(' ')[1].replace(/^"(.*)?(.j)"$/, '$1');
@@ -17,6 +18,14 @@ export class ObjjDocumentSymbolProvider implements vscode.DocumentSymbolProvider
                     symbols.push( this.makeSymbol(name, vscode.SymbolKind.Class, line) );
                 } else if (word == '@import') {
                     symbols.push( this.makeSymbol(name, vscode.SymbolKind.Package, line) );
+                } else if (word == '@outlet') {
+                    name = rawText.split(' ')[2].slice(0, -1);
+                    symbols.push( this.makeSymbol(name, vscode.SymbolKind.Variable, line) );
+                } else if (word == '@class') {
+                    symbols.push( this.makeSymbol(name, vscode.SymbolKind.Class, line) );
+                } else if (word == '@global') {
+                    name = name.slice(0, -1);
+                    symbols.push( this.makeSymbol(name, vscode.SymbolKind.Variable, line) );
                 }
             } else if (word.startsWith('+') || word.startsWith('-')) {
                 let matches = rawText.match(/^[-+]\s*\(\w+\)\s*(\w+)/)
