@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import * as acorn from 'acorn-objj';
 
-const packageJson = require('../package.json')
+const packageJson = require('../../package.json')
 const objjMarkdownId = "objj"
 const parser = acorn.parse;
 
