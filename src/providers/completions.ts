@@ -7,6 +7,8 @@ interface ClassSuggestion {
     ignore: boolean
 }
 
+const CLASS_REGEXP = /((\[[A-Z][a-zA-Z]*\])|(\([A-Z][a-zA-Z]*\))|(^\s*[A-Z][A-Za-z]*$))/
+
 const classes:Array<ClassSuggestion> = require('../../lib/classes.json');
 
 export class ObjjCompletionItemProvider implements vscode.CompletionItemProvider {
@@ -44,11 +46,13 @@ export class ObjjCompletionItemProvider implements vscode.CompletionItemProvider
             if (currentWord.length > 0) {
                 // class name matching
                 if (isUppercase(currentWord)) {
-                    classes.forEach(klass => {
-                        if (!klass.ignore && klass.className.startsWith(currentWord)) {
-                            suggestions.push(new vscode.CompletionItem(klass.className, vscode.CompletionItemKind.Class))
-                        }
-                    })
+                    if (CLASS_REGEXP.test(lineText)) {
+                        classes.forEach(klass => {
+                            if (!klass.ignore && klass.className.startsWith(currentWord)) {
+                                suggestions.push(new vscode.CompletionItem(klass.className, vscode.CompletionItemKind.Class))
+                            }
+                        })
+                    }
                 }
             }
 
