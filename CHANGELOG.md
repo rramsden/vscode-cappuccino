@@ -3,6 +3,10 @@ All notable changes this project will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.8] - 2017-12-31
+### Added
+- Added regular expression for class name intellisense
+
 ## [0.0.6] - 2017-12-16
 ### Fixed
 - acorn-objj package was not added as a dependency
