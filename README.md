@@ -4,6 +4,7 @@ This extension provides support for [Cappuccino](http://www.cappuccino-project.o
 
 * Syntax highlighting & checking for Objective-J
 * Quick symbol lookup (cmd+shift+o)
+* Objective-J Snippets (see snippets folder)
 
 ## Installation
 

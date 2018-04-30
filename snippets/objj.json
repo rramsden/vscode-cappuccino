@@ -1,0 +1,36 @@
+{
+    "Objective-J Implementation": {
+        "prefix": "implementation",
+        "description": "@implementation",
+        "body": [
+            "@implementation ${TM_FILENAME/(.*)\\..+$/$1/} : ${2:...subclass}",
+            "{",
+            "   ${3:...variables}",
+            "}",
+            "",
+            "$0",
+            "",
+            "@end"
+        ]
+    },
+    "Objective-J Instance Method": {
+        "prefix": "imethod",
+        "description": "Instance Method",
+        "body": [
+            "- (${1:returnType})${2:methodName}",
+            "{",
+            "   $0",
+            "}"
+        ]
+    },
+    "Objective-J Class Method": {
+        "prefix": "cmethod",
+        "description": "Instance Method",
+        "body": [
+            "+ (${1:returnType})${2:methodName}",
+            "{",
+            "   $0",
+            "}"
+        ]
+    }
+}

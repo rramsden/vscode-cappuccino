@@ -18,8 +18,8 @@
         "vscode:prepublish": "tsc"
     },
     "repository": {
-      "type": "git",
-      "url": "https://github.com/rramsden/vscode-cappuccino.git"
+        "type": "git",
+        "url": "https://github.com/rramsden/vscode-cappuccino.git"
     },
     "categories": [
         "Languages"
@@ -41,6 +41,12 @@
                     ".J"
                 ],
                 "configuration": "./language-configuration.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "objj",
+                "path": "./snippets/objj.json"
             }
         ],
         "grammars": [
