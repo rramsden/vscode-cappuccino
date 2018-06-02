@@ -22,7 +22,7 @@
         "url": "https://github.com/rramsden/vscode-cappuccino.git"
     },
     "categories": [
-        "Languages"
+        "Programming Languages"
     ],
     "activationEvents": [
         "onLanguage:objj"
